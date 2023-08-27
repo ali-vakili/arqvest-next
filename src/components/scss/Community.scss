@@ -63,22 +63,22 @@
 
         &:first-child{
 
-          & :first-child {
+          & span:first-child {
             display: none;
           }
 
-          & :nth-child(3) {
+          & span:nth-child(3) {
             align-self: center;
           }
 
-          & :last-child {
+          & span:last-child {
             align-self: flex-start !important;
           }
         }
 
         &:last-child {
 
-          & :last-child {
+          & span:last-child {
             display: none;
           }
         }

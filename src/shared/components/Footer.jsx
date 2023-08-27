@@ -85,31 +85,15 @@ const Footer = () => {
             <Col xs={4}>
               <ul>
                 <li>
-                  <Link href="/">Plans</Link>
+                  <Link href="#">Plans</Link>
                 </li>
 
                 <li>
-                  <Link href="/">Contact</Link>
+                  <Link href="#">Contact</Link>
                 </li>
 
                 <li>
-                  <Link href="/">News</Link>
-                </li>
-              </ul>
-            </Col>
-
-            <Col xs={4}>
-              <ul>
-                <li>
-                  <Link href="/">Company</Link>
-                </li>
-
-                <li>
-                  <Link href="/">Faq</Link>
-                </li>
-
-                <li>
-                  <Link href="/">Blog</Link>
+                  <Link href="#">News</Link>
                 </li>
               </ul>
             </Col>
@@ -117,11 +101,27 @@ const Footer = () => {
             <Col xs={4}>
               <ul>
                 <li>
-                  <Link href="/">Careers</Link>
+                  <Link href="#">Company</Link>
                 </li>
 
                 <li>
-                  <Link href="/">Legal</Link>
+                  <Link href="#">Faq</Link>
+                </li>
+
+                <li>
+                  <Link href="#">Blog</Link>
+                </li>
+              </ul>
+            </Col>
+
+            <Col xs={4}>
+              <ul>
+                <li>
+                  <Link href="#">Careers</Link>
+                </li>
+
+                <li>
+                  <Link href="#">Legal</Link>
                 </li>
               </ul>
             </Col>

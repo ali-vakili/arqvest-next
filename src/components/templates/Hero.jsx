@@ -74,7 +74,7 @@ const Hero = () => {
             </h1>
           </div>
           
-          <Link href="/" className="join">
+          <Link href="#" className="join">
             <button className="button">
               Join Us Now
             </button>

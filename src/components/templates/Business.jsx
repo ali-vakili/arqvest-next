@@ -35,7 +35,7 @@ const Business = () => {
           <p className="text-about-finance">
             Arqvest is a fintech company providing financial market-related services such as consultation, investment solutions, etc. with unique membership and credit card plans.
           </p>
-          <Link href="/" className="primary-link">
+          <Link href="#" className="primary-link">
             About Us
             <span></span>
           </Link>
@@ -55,8 +55,8 @@ const Business = () => {
             </div>
           ) : (
             <Marquee speed={25} gradient={true} gradientColor={[250, 250, 250]} gradientWidth={140} >
-              <Image className="partner apple" src={ApplePay}alt="apple_pay_logo" width={"100%"} height={"auto"} />
-              <Image className="partner stripe" src={Stripe} Image="stripe-logo" width={"100%"} height={"auto"} />
+              <Image className="partner apple" src={ApplePay} alt="apple_pay_logo" width={"100%"} height={"auto"} />
+              <Image className="partner stripe" src={Stripe} alt="stripe-logo" width={"100%"} height={"auto"} />
               <Image className="partner paypal" src={PayPal} alt="paypal-logo" width={"100%"} height={"auto"} />
               <Image className="partner square-inc" src={SquareInc} alt="square-inc-logo" width={"100%"} height={"auto"} />
             </Marquee>

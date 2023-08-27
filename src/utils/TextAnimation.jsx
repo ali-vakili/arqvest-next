@@ -62,7 +62,7 @@ const AnimatedLetters = ({ title, display="block", disabled }) => (
 
 const AnimateWords = ({ title, delay }) => (
   <motion.span
-    style={{ overflow: 'hidden', display: "inline-flex" }}
+    style={{ overflow: 'hidden', display: "block" }}
     >
       <motion.span
         variants={wordAnimation}
