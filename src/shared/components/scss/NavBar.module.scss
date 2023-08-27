@@ -1,0 +1,79 @@
+@use "@/assets/scss/forward" as *;
+
+.navbar {
+  position: absolute;
+  top: 48px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  z-index: 9999;
+
+  @include media("<tablet") {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    top: 24px;
+  }
+}
+
+.menu {
+  border: none;
+  padding: 16px 8px;
+  background-color: #202020;
+  transition: background-color 600ms ease;
+
+  @include media(">=Slaptop") {
+    display: none;
+  }
+
+  &:hover {
+    background-color: $Primary;
+  }
+}
+
+.navLinks {
+  display: flex;
+
+  @include media("<Slaptop") {
+    display: none;
+  }
+}
+
+.navLink {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 8px 24px;
+
+  @include media(">=Slaptop") {
+
+    &::after {
+      transform: translateY(-100%);
+      content: "";
+      opacity: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $white;
+      transition: all 300ms ease;
+    }
+
+    &:hover {
+
+      &::after {
+        opacity: 1;
+        transform: translateY(100%);
+      }
+    }
+  }
+}
+
+.navLink:first-child {
+  padding-left: 0;
+}
+
+.navLink:last-child {
+  padding-right: 0;
+}

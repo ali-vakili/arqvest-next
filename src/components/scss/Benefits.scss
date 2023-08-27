@@ -1,0 +1,149 @@
+@use "@/assets/scss/forward" as *;
+
+
+.benefits-section {
+  display: flex;
+  min-height: 645px;
+  background-color: $SecondWhite;
+
+  .row {
+    flex-grow: 1;
+    padding-top: 128px;
+    padding-bottom: 128px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media("<Slaptop") {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  }
+
+  .describe {
+
+    h1 {
+      color: $FirstBlack;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+  }
+
+  .benefit-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom:1.5px solid $SeventhBlack;
+    text-transform: none;
+    max-height: 80px;
+    width: 100%;
+    padding: 16px 8px;
+    transition: all 300ms ease-in-out;
+    
+    h4 {
+      font-family: 'Plus Jakarta Sans', sans-serif !important;
+      color: $SeventhBlack;
+      transition: all 300ms ease-in-out;
+    }
+
+    div {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
+
+      h6 {
+        text-transform: uppercase;
+        color: transparent;
+        transition: all 300ms ease-in-out;
+      }
+      
+      span {
+        position: absolute;
+        display: inline-block;
+        height: 24px;
+        width: 24px;
+        right: 0;
+        margin-left: auto;
+        overflow: hidden;
+        
+        &::after {
+          position: absolute;
+          top: 0;
+          right: 0;
+          height: 24px;
+          width: 24px;
+          background-color: transparent;
+          content: url("../assets/arrow-default-light.svg");
+          transition: all 300ms ease-in-out;
+        }
+  
+        &::before {
+          position: absolute;
+          bottom: -24px;
+          right: 24px;
+          height: 24px;
+          width: 24px;
+          background-color: transparent;
+          content: url("../assets/arrow-default.svg");
+          transition: all 300ms ease-in-out;
+        }
+      }
+    }
+
+    &.active {
+      color: $FirstBlack !important;
+      border-color: $FirstBlack;
+
+      h4 {
+        color: $FirstBlack;
+      }
+      
+      div {
+        
+        h6 {
+          color: $FirstBlack;
+          padding-top: 28px;
+        }
+
+        span {
+
+          &::before {
+            transform: translate(100%, -100%);
+          }
+      
+          &::after {
+            transform: translate(100%, -100%);
+          }
+        }
+      }
+    }
+
+    &:hover {
+      color: $FirstBlack !important;
+      border-color: $FirstBlack;
+
+      h4 {
+        color: $FirstBlack;
+      }
+      
+      div {
+        
+        h6 {
+          color: $FirstBlack;
+          padding-top: 28px;
+        }
+
+        span {
+
+          &::before {
+            transform: translate(100%, -100%);
+          }
+      
+          &::after {
+            transform: translate(100%, -100%);
+          }
+        }
+      }
+    }
+  }
+}

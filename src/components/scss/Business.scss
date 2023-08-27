@@ -1,0 +1,136 @@
+@use "@/assets/scss/forward" as *;
+
+
+@keyframes move {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.business-section {
+  position: relative;
+  background-color: $SecondWhite;
+}
+
+.financial-market {
+  display: flex;
+  width: 100%;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  background-color: $white;
+  border-radius: 4px;
+  margin-left: 0 !important;
+
+  @include media(">=Slaptop") {
+    position: absolute;
+    top: -25%;
+    left: 50%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    transform: translateX(-50%);
+    box-shadow: 0px 4px 100px 0px rgba(0, 0, 0, 0.05);
+    z-index: 10;
+  }
+
+  @include media("<tablet") {
+    text-align: center;
+  }
+
+  .financial {
+    display: flex;
+    align-items: center;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    user-select: none;
+
+    @include media("<Slaptop") {
+      justify-content: center;
+      margin-bottom: 32px;
+    }
+    
+    h1 {
+      width: fit-content;
+      background-color: $FirstBlack;
+      background-image: url("../assets/Business/Gradient.png");
+      background-repeat: no-repeat;
+      background-position: left;
+      background-size: cover;
+      color: transparent;
+      -webkit-background-clip: text;
+      font-weight: 600;
+      margin: 0;
+      user-select: none;
+    }
+  }
+}
+
+.finance-description {
+  padding-right: 0 !important;
+
+  p.text-about-finance {
+    color: $FirstBlack;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0;
+    margin-bottom: 16px;
+  }
+}
+
+.business {
+  min-height: 298px;
+
+  .content-block {
+    position: relative;
+    padding-top: 160px;
+    padding-bottom: 120px;
+    text-align: center;
+
+    @include media("<Slaptop") {
+      padding-top: 64px;
+      padding-bottom: 64px;
+    }
+
+    h5.text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 600;
+      color: $FourthBlack;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+
+      @include media("<Slaptop") {
+        margin-bottom: 64px;
+      }
+    }
+  }
+
+  .partners {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+
+    .partner {
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+  }
+}
+
+.marquee {
+
+  .child {
+    margin: 0 84px;
+
+    @include media("<Slaptop") {
+      margin: 0 64px;
+    }
+
+    .partner {
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+  }
+}

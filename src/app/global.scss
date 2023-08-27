@@ -1,0 +1,12 @@
+@use "@/assets/scss/basics" as *;
+@use "@/assets/scss/basics" as *;
+
+div.container-arqvest {
+  min-width: 320px;
+  min-height: 100vh;
+
+  .section{
+    width: 100%;
+    margin: auto;
+  }
+}

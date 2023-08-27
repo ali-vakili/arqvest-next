@@ -1,0 +1,96 @@
+@use "colors" as *;
+@use "include-media" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+  font-weight: 400 !important;
+  background-color: #141414 !important;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  --bs-body-font-family: none !important;
+  --bs-body-bg: $body-bg !important;
+}
+
+*, *::before, *::after{
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+}
+  
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif !important;
+  color: unset !important;
+}
+
+a{
+  font-family: 'Roboto', sans-serif !important;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  color: $Gray2 !important;
+  user-select: none;
+  transition: color 600ms ease;
+
+  &:hover {
+    color: $white !important;
+  }
+}
+
+button {
+  display: flex;
+  place-items: center;
+  text-transform: uppercase !important;
+  box-sizing: border-box;
+  color: $white !important;
+  padding: 0 16px;
+  font-size: 16px !important;
+  font-weight: 500;
+  outline: none;
+  border: 2px solid $white;
+  background-color: #231F1D;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+::-moz-selection{
+  color: $Primary;
+  background-color: $white;
+}
+
+::selection{
+  color: $Primary;
+  background-color: $white;
+}

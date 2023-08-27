@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/assets/*": ["src/assets/*"],
+      "@/app/*": ["src/app/*"],
+      "@/components/*": ["src/components/*"],
+      "@/shared/*": ["src/shared/components/*"],
+      "@/utils/*": ["src/utils/*"],
+      "@/template/*": ["src/components/template/*"],
+      "@/layout/*": ["src/components/layout/*"],
+      "@/sccs/*": ["src/components/template/scss/*"],
+    }
+  }
+}

@@ -1,0 +1,190 @@
+@use "@/assets/scss/forward" as *;
+
+@keyframes breathingAnimation {
+  0% {
+    transform: scale(1);
+    opacity: 0.15;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.25;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.15;
+  }
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+
+  #lottie{
+    background-color: #171717 !important;
+    display: block;
+    overflow: hidden;
+    transform: translate3d(0,0,0);
+    text-align: center;
+    opacity: 1;
+  }
+
+  svg {
+    
+    g {
+      filter: blur(200px);
+    }
+  }
+  
+  .circle {
+    display: none;
+    position: absolute;
+    background-color: $Primary;
+    border-radius: 50%;
+    height: 100%;
+    width: 50%;
+    opacity: 0.15;
+    filter: blur(200px);
+  }
+
+  .top {
+    right: -40%;
+    top: -50%;
+    animation: breathingAnimation 6s infinite;
+  }
+
+  .bottom {
+    left: -30%;
+    bottom: -60%;
+    animation:breathingAnimation 6s infinite;
+  }
+}
+
+.join {
+  position: relative;
+  width: fit-content;
+
+  @include media(">=tablet") {
+
+    &::after {
+      position: absolute;
+      right: 0;
+      content: url("../assets/svg/button-arrow.svg");
+      height: 40px;
+      width: 40px;
+      padding:8px;
+      outline: none;
+      border-radius: 0 4px 4px 0;
+      background-color: transparent;
+      z-index: 1;
+      transition: all 300ms ease-in-out;
+    }
+  }
+
+
+  &:hover {
+
+    .button {
+      background-color: $Primary;
+      border-color: transparent;
+    }
+
+    @include media(">=tablet") {
+
+      .button {
+        border-radius: 4px 0 0 4px;
+      }
+
+      &::after {
+        transform: translateX(108%);
+        background-color: $Primary;
+      }
+    }
+
+  }
+
+  .button {
+    height: 40px;
+    border-radius: 4px;
+    transition: all 300ms ease-in-out;
+    z-index: 2;
+  }
+}
+
+.primary-link {
+  display: inline-block;
+  vertical-align: middle;
+  width: fit-content;
+  font-size: 16px;
+  color: $Primary !important;
+  overflow: hidden;
+  transition: all 300ms ease-in-out;
+
+  span {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    margin-left: 8px;
+    height: 24px;
+    width: 24px;
+
+    &::before {
+      position: absolute;
+      right: 24px;
+      bottom: -24px;
+      content: url("../components/assets/arrow-primary.svg");
+      height: 24px;
+      width: 24px;
+      background-color: transparent;
+      opacity: 0;
+      transition: all 300ms ease-in-out;
+    }
+  
+    &::after {
+      position: absolute;
+      right: 0;
+      top: 0;
+      content: url("../components/assets/arrow-primary.svg");
+      height: 24px;
+      width: 24px;
+      background-color: transparent;
+      transition: all 300ms ease-in-out;
+    }
+  }
+
+
+  &:hover {
+    color: $Primary !important;
+
+    span {
+      
+      &::before {
+        transform: translate(100%, -100%);
+        opacity: 1;
+      }
+  
+      &::after {
+        transform: translate(100%, -100%);
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.describe {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  margin-bottom: 40px;
+}
+
+.tag {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: $FourthBlack;
+  margin-bottom: 8px;
+}

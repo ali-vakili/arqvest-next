@@ -1,0 +1,49 @@
+@use "@/assets/scss/forward" as *;
+
+
+.footer {
+  padding-top: 80px;
+  padding-bottom: 80px;
+
+  @include media("<Slaptop") {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .logo {
+    padding: 0 12px;
+  }
+
+  .address {
+    padding: 0 12px;
+    font-weight: 400;
+    color: $SixthBlack;
+    line-height: 1.4;
+    margin-bottom: 24px;
+
+    @include media("<Slaptop") {
+      margin-bottom: 40px;
+    }
+  }
+
+  .directories {
+    display: flex;
+    padding: 0 12px;
+    
+    ul{
+      color: $SixthBlack;
+
+      & li:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .copyright {
+    padding: 0 12px;
+
+    p {
+      margin: 0;
+    }
+  }
+}
