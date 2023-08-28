@@ -11,8 +11,10 @@ export const metadata = {
   title: 'arqvest',
   description: 'Arqvest, a smart way of investment!.Arqvest is a fintech company providing financial market-related services such as consultation, investment solutions, etc. with unique membership and credit card plans.',
   icons:{ 
-    icon: "./favicon.ico",
-  }
+    icon: '/favicon.ico',
+    apple: '/apple-icon.png',
+  },
+  manifest: "/site.webmanifest"
 }
 
 const RootLayout = ({ children }) => {
