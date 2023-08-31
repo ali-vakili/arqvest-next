@@ -94,7 +94,7 @@
     }
 
     h5.text {
-      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-family: var(--font-plus-jakarta-sans);
       font-weight: 600;
       color: $FourthBlack;
       text-transform: uppercase;

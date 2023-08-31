@@ -1,10 +1,12 @@
 import Layout from '@/components/layout/Layout';
-import { Roboto } from 'next/font/google';
+import { Roboto, Plus_Jakarta_Sans } from 'next/font/google';
 
 import 'bootstrap/dist/css/bootstrap.css'
 import './global.scss';
 
-const roboto = Roboto({ subsets: ['latin'], weight: ['100', '300', '400', '500', '700', '900'], display:'swap' });
+const roboto = Roboto({ subsets: ['latin'], weight: ['100', '300', '400', '500', '700', '900'], variable: "--font-roboto" });
+
+const plusJakartaSans = Plus_Jakarta_Sans({ subsets: ['latin'], weight: ['200', '300', '400', '500', '700', '800'], display:'swap', variable: "--font-plus-jakarta-sans"  });
 
 
 export const metadata = {
@@ -20,7 +22,7 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html lang="en" data-bs-theme="dark">
-      <body className={roboto.className}>
+      <body className={`${roboto.variable} ${plusJakartaSans.variable}`}>
         <div id="_next">
           <Layout>
             {children}
