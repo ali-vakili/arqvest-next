@@ -44,7 +44,7 @@ const Benefits = () => {
             <AnimatedLetters title={"Benefits are much"} display="inline-flex" />
             <AnimatedLetters title={"more than money."} display="inline-flex"/>
           </h1>
-          <Link href="#" className="primary-link">
+          <Link href="#" className="primary-link" scroll={false}>
             Learn More
             <span></span>
           </Link>
@@ -62,7 +62,7 @@ const Benefits = () => {
                 duration: 2,
               }}
             >
-              <Link href="#" className={classnames("benefit-link", { active: !linkHover && !isTouchScreen })}>
+              <Link href="#" className={classnames("benefit-link", { active: !linkHover && !isTouchScreen })} scroll={false}>
                 <h4>
                   International Contracts
                 </h4>
@@ -84,7 +84,7 @@ const Benefits = () => {
               }}
               {...liEventHandlers}
             >
-              <Link href="#" className="benefit-link">
+              <Link href="#" className="benefit-link" scroll={false}>
                 <h4>
                   Monthly Reports
                 </h4>
@@ -106,7 +106,7 @@ const Benefits = () => {
               }}
               {...liEventHandlers}
             >
-              <Link href="#" className="benefit-link">
+              <Link href="#" className="benefit-link" scroll={false}>
                 <h4>
                   24/7 Online Support
                 </h4>
@@ -128,7 +128,7 @@ const Benefits = () => {
               }}
               {...liEventHandlers}
             >
-              <Link href="#" className="benefit-link">
+              <Link href="#" className="benefit-link" scroll={false}>
                 <h4>
                   World Wide Agencies
                 </h4>
@@ -150,7 +150,7 @@ const Benefits = () => {
               }}
               {...liEventHandlers}
             >
-              <Link href="#" className="benefit-link">
+              <Link href="#" className="benefit-link" scroll={false}>
                 <h4>
                   Various IB Plans
                 </h4>
@@ -172,7 +172,7 @@ const Benefits = () => {
               }}
               {...liEventHandlers}
             >
-              <Link href="#" className="benefit-link">
+              <Link href="#" className="benefit-link" scroll={false}>
                 <h4>
                   Financial Consultant
                 </h4>

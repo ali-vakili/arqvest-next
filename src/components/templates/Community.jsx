@@ -59,7 +59,7 @@ const Community = () => {
             <AnimatedLetters title={"Community defines"} />
             <AnimatedLetters title={"the actual value!"} />
           </h1>
-          <Link className="learn primary-link" href="#">
+          <Link className="learn primary-link" href="#" scroll={false}>
             Learn More
             <span></span>
           </Link>

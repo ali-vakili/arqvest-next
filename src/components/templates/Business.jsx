@@ -35,7 +35,7 @@ const Business = () => {
           <p className="text-about-finance">
             Arqvest is a fintech company providing financial market-related services such as consultation, investment solutions, etc. with unique membership and credit card plans.
           </p>
-          <Link href="#" className="primary-link">
+          <Link href="#" className="primary-link" scroll={false}>
             About Us
             <span></span>
           </Link>
